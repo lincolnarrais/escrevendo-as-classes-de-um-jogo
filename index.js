@@ -29,14 +29,14 @@ class Heroi {
     }
 }
 
-const garen = new Heroi('Garen', 25, 'guerreiro');
-garen.atacar();
+const herois = [
+    { nome: 'Garen', idade: 25, tipo: 'guerreiro' },
+    { nome: 'Ryze', idade: 250, tipo: 'mago' },
+    { nome: 'Kennen', idade: 60, tipo: 'ninja' },
+    { nome: 'Lee Sin', idade: 30, tipo: 'monge' }
+];
 
-const ryze = new Heroi('Ryze', 250, 'mago');
-ryze.atacar();
-
-const kennen = new Heroi('Kennen', 60, 'ninja');
-kennen.atacar();
-
-const leeSin = new Heroi('Lee Sin', 30, 'monge');
-leeSin.atacar();
+for (let index in herois) {
+    let heroi = new Heroi(herois[index].nome, herois[index].idade, herois[index].tipo);
+    heroi.atacar();
+}
